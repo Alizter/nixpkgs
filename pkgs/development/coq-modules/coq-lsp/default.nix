@@ -12,6 +12,7 @@ mkCoqDerivation rec {
   inherit version;
   defaultVersion = with lib.versions; lib.switch coq.coq-version [
     { case = isEq "8.16"; out = "0.1.6.1+8.16"; }
+    { case = isEq "8.17"; out = "0.1.6+8.17"; }
   ] null;
 
   nativeBuildInputs = [ makeWrapper ];
@@ -30,7 +31,7 @@ mkCoqDerivation rec {
     description = "Language Server Protocol and VS Code Extension for Coq";
     homepage = "https://github.com/ejgallego/coq-lsp";
     changelog = "https://github.com/ejgallego/coq-lsp/blob/${defaultVersion}/CHANGES.md";
-    maintainers = with maintainers; [ marsam ];
+    maintainers = with maintainers; [ alizter marsam ];
     license = licenses.lgpl21Only;
   };
 }

@@ -1047,6 +1047,8 @@ let
     };
 
     mec = callPackage ../development/ocaml-modules/mec { };
+    
+    memprof-limits = callPackage ../development/ocaml-modules/memprof-limits { };
 
     memtrace = callPackage ../development/ocaml-modules/memtrace { };
 
